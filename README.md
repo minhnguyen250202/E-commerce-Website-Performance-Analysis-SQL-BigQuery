@@ -21,7 +21,7 @@ Tools Used: SQL
 
 
 ***
-# 📌 Background & Overview 
+# Background & Overview
 
 ***📖 Objective:***
 
@@ -52,7 +52,7 @@ Those seeking to identify optimization opportunities for their website.
 
 ***
 
-# 📂 Dataset Description & Data Structure
+# Dataset Description & Data Structure
 
 ***📌 Data Source***
 
