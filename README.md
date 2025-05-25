@@ -1,5 +1,8 @@
 # E-commerce  Website Performance Analysis - SQL,BigQuery
 
+![image](https://github.com/user-attachments/assets/93bd330a-0a29-49db-8546-131cf26f59cc)
+
+
 Author: Nguyễn Thị Ánh Minh 
 
 Date:  2025/01/10
@@ -7,11 +10,12 @@ Date:  2025/01/10
 Tools Used: SQL
 
 ***
+
 **📑 Table of Contents**
 
 [📌 Background & Overview](#background--overview)
 
-[📂 Dataset Description & Data Structure](#dataset--description--data-structure)
+[📂 Dataset Description & Data Structure](#dataset-description--data-structure)
 
 🔎 Use cases 
 
