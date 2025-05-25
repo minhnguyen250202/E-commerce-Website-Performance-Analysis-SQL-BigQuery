@@ -9,15 +9,15 @@ Tools Used: SQL
 ***
 **📑 Table of Contents**
 
-[📌 Background & Overview](#1.background--overview)
+[📌 Background & Overview](#background--overview)
 
-📂 Dataset Description & Data Structure
+[📂 Dataset Description & Data Structure](#dataset--description--data-structure)
 
 🔎 Use cases 
 
 
 ***
-**📌 1. Background & Overview**
+# 📌 Background & Overview 
 
 ***📖 Objective:***
 
@@ -48,7 +48,7 @@ Those seeking to identify optimization opportunities for their website.
 
 ***
 
-**📂 2.Dataset Description & Data Structure**
+# 📂 Dataset Description & Data Structure
 
 ***📌 Data Source***
 
