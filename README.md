@@ -13,9 +13,9 @@ Tools Used: SQL
 
 **📑 Table of Contents**
 
-[📌 Background & Overview](#background--overview)
+- [📌 Background & Overview](#background--overview)
 
-[📂 Dataset Description & Data Structure](#dataset-description--data-structure)
+- [📂 Dataset Description & Data Structure](#dataset-description--data-structure)
 
 🔎 Use cases 
 
