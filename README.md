@@ -13,7 +13,7 @@ Tools Used: SQL
 
 **📑 Table of Contents**
 
-- [📌 Background & Overview](#background--overview)
+- [📌Background & Overview](#background--overview)
 
 - [📂 Dataset Description & Data Structure](#dataset-description--data-structure)
 
@@ -21,7 +21,7 @@ Tools Used: SQL
 
 
 ***
-# Background & Overview
+# 📌Background & Overview
 
 ***📖 Objective:***
 
@@ -52,7 +52,7 @@ Those seeking to identify optimization opportunities for their website.
 
 ***
 
-# Dataset Description & Data Structure
+# 📂Dataset Description & Data Structure
 
 ***📌 Data Source***
 
