@@ -1,7 +1,4 @@
-# E-commerce  Website Performance Analysis 
-Utilized SQL in BigQuery to efficiently manage and analyze e-commerce data, including data cleaning, transformation, and integration from multiple sources. Generated comprehensive reports on customer behavior and sales performance to support business decision-making.
-
-# Project Title: E-commerce Website Performance Analysis
+# E-commerce  Website Performance Analysis - SQL,BigQuery
 
 Author: Nguyễn Thị Ánh Minh 
 
@@ -12,7 +9,7 @@ Tools Used: SQL
 ***
 **📑 Table of Contents**
 
-📌 Background & Overview
+[📌 Background & Overview](#1.background--overview)
 
 📂 Dataset Description & Data Structure
 
