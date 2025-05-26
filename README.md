@@ -21,7 +21,6 @@ Tools Used: SQL
 
 - [🔎Final Conclusions & Recommendations](#final-conclusions--recommendations)
   
-- [💌 Key Takeaways](#key-takeaways)
 
 ***
 # 📌Background & Overview
@@ -65,7 +64,7 @@ Those seeking to identify optimization opportunities for their website.
 
 - Size: ~467260 rows
 
-- Time Analyzed: Jan 2017 to July 2017
+- Time Analyzed: January 2017 to July 2017
 
 **📊 Data Structure & Relationships**
 
@@ -100,9 +99,9 @@ Important steps in preparing the data through SQL queires, for example:
 
 ### SQL Analysis Tasks:
 
-#### TASK 1: MONTHLY OVERVIEW (Jan, Feb, Mar 2017)
+#### TASK 1: MONTHLY OVERVIEW (January, February, March 2017)
 
- - 📌 **Requirement:** Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+ - 📌 **Requirement:** Calculate total visit, pageview, transaction for Januart, February and March 2017 (order by month)
  
  - ️🎯 **Analytical Purpose:** This analysis aims to monitor key website metrics — total visits, pageviews, and transactions — aggregated monthly during Q1 2017. By transforming raw date strings into structured datetime formats, the query enables a clear month-over-month comparison. The goal is to uncover user interaction trends and evaluate how effectively the website drives engagement and conversions over time.
   
@@ -126,13 +125,13 @@ ORDER BY 1;
 
 - **📊 Observation:**
 
-During Q1 of 2017, there was **a gradual increase in total visits, pageviews, and transactions** over the three months:
-
-Transactions rose from 713 in January to 993 in March.
-
-Both visits and pageviews followed a similar upward trend, indicating improved website performance and better conversion capabilities toward the end of the quarter.
-
-➡️ This may suggest **enhancements in user experience or more effective marketing campaigns** implemented in March.
+    - During Q1 of 2017, there was **a gradual increase in total visits, pageviews, and transactions** over the three months:
+    
+    - Transactions rose from 713 in January to 993 in March.
+    
+    - Both visits and pageviews followed a similar upward trend, indicating improved website performance and better conversion capabilities toward the end of the quarter.
+    
+    ➡️ This may suggest **enhancements in user experience or more effective marketing campaigns** implemented in March.
 
 #### TASK 2: BOUNCE RATE BY TRAFFIC SOURCE (July 2017)
 
@@ -159,13 +158,13 @@ ORDER BY 2 DESC ;
 
  - **📊 Observation:**
 
-Google is the top traffic source with **38,400 visits** and **a bounce rate of 51.56%** , indicating **a moderate of user engagement**. 
+    - Google is the top traffic source with **38,400 visits** and **a bounce rate of 51.56%** , indicating **a moderate of user engagement**. 
+    
+    - Direct traffic performs relatively well with **a lower bounce rate of 43.27%**, suggesting that users who access the site directly are more engaged. 
+    
+    - Youtube shows **the highest bounce rate with 66.73%**, which may imply weaker intent or mismatched content expectations from users. 
 
-Direct traffic performs relatively well with **a lower bounce rate of 43.27%**, suggesting that users who access the site directly are more engaged. 
-
-Youtube shows **the highest bounce rate with 66.73%**, which may imply weaker intent or mismatched content expectations from users. 
-
-#### TASK 3: REVENUE BY TRAFFIC SOURCE (Jun 2017) 
+#### TASK 3: REVENUE BY TRAFFIC SOURCE (June 2017) 
 
 - 📌 **Requirement:** Track and compare revenue performance by traffic source, both on a weekly and monthly basis for June 2017.
 
@@ -216,21 +215,19 @@ ORDER BY time_type;
 
 - **📊 Observation:**
 
-The **direct traffic source** brought the **highest revenue** in June 2017:
+    - The **direct traffic source** brought the **highest revenue** in June 2017: Monthly: $97,333.62
+    
+    - Weekly breakdown: Peaks in week 24 ($30,908.91) and week 25 ($27,295.32).
+    
+    - **Google** contributed **less revenue** in comparison with $18,757.18 for the whole month.
+    
+    - The fluctuation across weeks helps pinpoint which periods and sources were most profitable, suggesting the importance of direct user loyalty or effective offline/brand marketing.
 
-Monthly: $97,333.62
+#### TASK 4: AVERAGE NUMBER OF PAGEVIEWS BY PURCHASE TYPE ( June & July 2017) 
 
-Weekly breakdown: Peaks in week 24 ($30,908.91) and week 25 ($27,295.32).
+ - 📌 **Requirement:** Analyze user engagement by comparing the average number of pageviews between purchasers and non-purchasers during June and July 2017.
 
-**Google** contributed **less revenue** in comparison with $18,757.18 for the whole month.
-
-The fluctuation across weeks helps pinpoint which periods and sources were most profitable, suggesting the importance of direct user loyalty or effective offline/brand marketing.
-
-#### TASK 4: AVERAGE NUMBER OF PAGEVIEWS BY PURCHASE TYPE ( Jun & Jul 2017) 
-
- - 📌 **Requirement:**
-
- - 🎯 **Analytical Purpose:**
+ - 🎯 **Analytical Purpose:** To understand whether users who make purchases interact more or less with the website compared to those who do not. This helps assess user behavior patterns and potential friction in the buying journey.
 
  - 📝**SQL Query:**
 ```sql
@@ -275,10 +272,22 @@ order by pd.month;
 
  - **📊 Observation:**
 
-#### TASK 5: AVERAGE NUMBER OF TRANSACTIONS PER USER (Jul 2017) 
-- 📌 **Requirement:**
+    - **Non-purchasers consistently viewed 3 to 4 times** more pages on average **than purchasers** in both months.
+
+    - Purchasers had fewer pageviews per user, possibly indicating more efficient or direct paths to conversion.
+
+    - In contrast, non-purchasers explored more pages but did not convert, suggesting potential barriers in the conversion funnel (e.g., pricing, navigation issues, or unclear CTAs).
+
+    -  From June to July, both segments showed an increase in engagement, especially among purchasers (+32% in avg. pageviews).
+
+#### TASK 5: AVERAGE NUMBER OF TRANSACTIONS PER USER (July 2017) 
+
+- 📌 **Requirement:** Calculate the average number of transactions per user in July 2017.
 
  - 🎯 **Analytical Purpose:**
+
+    - To measure the performance of users who made transactions during July.
+    - This metric helps identify whether users tend to make repeated purchases or only transact once.
 
  - 📝**SQL Query:**
   
@@ -308,11 +317,24 @@ FROM data_raw;
 ![image](https://github.com/user-attachments/assets/d42b3077-1321-49b3-8f5e-ffb44a7f15ee)
 
  - **📊 Observation:**
+   
+      - In July 2017, each purchasing user made an average of **4.16 transactions.**
+      
+      - This is **a relatively high number**, indicating that these users are either: Returning for repeat purchases, or Purchasing multiple products in separate sessions.
+      
+      - It may reflect the success of marketing campaigns, strong user experience (UX), or increased seasonal demand.
+      
+      💡 This metric can be used to identify high-value customer segments for targeted remarketing or exclusive offers.
+       
 
-#### TASK 6: AVERAGE AMOUNT OF MONEY SPENT PER SESSION (Jul 2017) 
- - 📌 **Requirement:**
+#### TASK 6: AVERAGE AMOUNT OF MONEY SPENT PER SESSION (July 2017) 
+
+ - 📌 **Requirement:** Calculate the average amount of money spent per session in July 2017.
 
  - 🎯 **Analytical Purpose:**
+     - Evaluate customer spending behavior per session.
+
+    - Help identify monetary value per session to optimize marketing or site experience.
 
  - 📝**SQL Query:**
 ```sql
@@ -330,12 +352,18 @@ GROUP BY month;
 
 ![image](https://github.com/user-attachments/assets/20a44697-6d48-4f27-8f61-3de623bd8f6d)
 
- - **📊 Observation:** Average revenue per session in July 2017 is 43.86
+ - **📊 Observation:** Average revenue per session in July 2017 is **43.86**
 
-#### TASK 7: 
- - 📌 **Requirement:**
+#### TASK 7: OTHERS PRODUCTS PURCHASED BY CUSTOMER (July 2017)
+
+ - 📌 **Requirement:** Find other products purchased by customers who bought "YouTube Men's Vintage Henley" during July 2017.
 
  - 🎯 **Analytical Purpose:**
+
+    - Understand cross-sell opportunities by identifying which products are frequently bought together.
+  
+    - Reveal patterns in customer purchasing behavior for potential bundling strategies.
+
 
  - 📝**SQL Query:**
 ```sql
@@ -367,11 +395,35 @@ ORDER BY quantity DESC;
 
  - **📊 Observation:**
 
+    - Customers who bought YouTube Men's Vintage Henley often also bought Google Sunglasses, suggesting a strong cross-sell potential.
 
-#### TASK 8: 
+    - Apparel and accessories are frequently bought together, which can be useful for bundle promotions or recommendation systems.
+
+
+
+#### TASK 8: COHORT ANALYSIS ( January, February, March 2017) 
+
  - 📌 **Requirement:**
 
+    - Calculate the **conversion rates** by** monthly cohort** across the funnel stages:
+  
+    - Product View ➜ Add to Cart ➜ Purchase
+  
+    - Conversion formulas:
+  
+        add_to_cart_rate = num_addtocart / num_product_view
+  
+        purchase_rate = num_purchase / num_product_view
+
+
  - 🎯 **Analytical Purpose:**
+   
+   -  Understand performance across each e-commerce funnel stage.
+
+   - Identify where customers drop off most (e.g., many views but few add-to-carts).
+
+    - Use this insight to optimize actions such as product descriptions, UX improvements, or promotions for better conversions.
+
 
  - 📝**SQL Query:**
 ```sql
@@ -415,10 +467,62 @@ ORDER BY month;
 
  - **📊 Observation:**
 
+    - Both **add-to-cart and purchase rates increased** over time **from January to March**.
+  
+    - **March 2017 performed the best**, with 37.29% of views leading to add-to-cart and 12.64% resulting in purchases.
+  
+    - This may reflect the success of marketing campaigns, UX improvements, or seasonal factors during March.
+
+
 --- 
 
 # 🔎Final Conclusions & Recommendations 
 
---- 
-# 💌Key Takeaways 
+## ✅ Conclusion
+
+**1. Website Performance & Engagement**
+
+The website maintains **stable traffic**, with metrics such as v**isits, pageviews, and transactions** providing a clear picture of overall health.
+
+**Bounce rates** vary significantly across traffic sources, indicating differences in traffic quality.
+
+**2.User Behavior & Conversion Funnel**
+
+The **conversion funnel** from product view → add to cart → purchase shows a steep drop-off, with **only ~10% or less completing a purchase**.
+
+Users who made a purchase in July 2017 performed **an average of 4.16 transactions per person**, suggesting the presence of **high-value, loyal customers.**
+
+**3.Product Insights**
+
+Certain products, such as YouTube Men's Vintage Henley, act as “magnet” products, often purchased alongside others.
+
+Purchasers tend to view significantly more pages per session, reflecting stronger engagement before conversion.
+
+## 💡 Recommendations
+
+**1. Optimize Conversion Funnel**
+
+Investigate drop-offs at the "add to cart" stage to understand friction points.
+
+Test strategies like **remarketing ads, personalized product suggestions**, or **first-time buyer discounts** to improve conversion rates.
+
+**2.Enhance User Experience & Product Content**
+
+Improve product pages with **high-quality images, clear descriptions, and customer reviews** to retain interest and drive action.
+
+Reduce bounce rate from underperforming traffic sources by customizing landing pages for relevance.
+
+**3.Focus on High-Value Customers**
+
+Launch **exclusive campaigns targeting users** with high transaction counts.
+
+Consider implementing loyalty programs, bundle offers, or early access deals to encourage repeat purchases.
+
+**4.Leverage Cross-Selling Opportunities**
+
+Use high-performing items (like YouTube Men's Vintage Henley) as **lead products in bundling strategies**.
+
+Feature them in product recommendations and email campaigns to boost average order value.
+
+
    
