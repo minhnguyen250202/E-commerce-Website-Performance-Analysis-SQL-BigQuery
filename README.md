@@ -482,7 +482,7 @@ ORDER BY month;
 
 **1. Website Performance & Engagement**
 
-The website maintains **stable traffic**, with metrics such as v**isits, pageviews, and transactions** providing a clear picture of overall health.
+The website maintains **stable traffic**, with metrics such as **visits, pageviews, and transactions** providing a clear picture of overall health.
 
 **Bounce rates** vary significantly across traffic sources, indicating differences in traffic quality.
 
