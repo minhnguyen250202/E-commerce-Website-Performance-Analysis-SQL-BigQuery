@@ -1,0 +1,20 @@
+--Query 05: Average number of transactions per user that made a purchase in July 2017
+
+WITH data_raw as (
+        SELECT 
+                FORMAT_DATE ('%Y%m', PARSE_DATE('%Y%m%d',date)) as month
+                ,COUNT (DISTINCT fullVisitorId) as num_user 
+                , SUM (totals.transactions) as total_transaction_purchase
+                , CASE 
+                        WHEN totals.transactions>=1 AND product.productRevenue IS NOT NULL THEN 'purchase' END AS user_type
+        FROM 
+                `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
+                UNNEST (hits) AS hits,
+                UNNEST (hits.product) AS product
+        WHERE product.productRevenue IS NOT NULL 
+        GROUP BY month, user_type) 
+
+SELECT 
+    month
+    ,ROUND (total_transaction_purchase/ num_user,9) as Avg_total_transactions_per_user
+FROM data_raw;
