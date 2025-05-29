@@ -1,0 +1,34 @@
+--Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase.
+
+WITH product_addtocart_cte as (
+      SELECT 
+            FORMAT_DATE ('%Y%m', PARSE_DATE('%Y%m%d',date)) as month
+            , SUM (CASE WHEN hits.eCommerceAction.action_type = '2' THEN 1 END) as num_product_view
+            , SUM (CASE WHEN hits.eCommerceAction.action_type = '3' THEN 1 END) as num_addtocart
+      FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*` ,
+            UNNEST (hits) as hits,
+            UNNEST (hits.product) AS product
+      WHERE _table_suffix BETWEEN '0101' AND '0331' 
+      GROUP BY month
+      ORDER BY month )
+, 
+purchase_cte as (
+      SELECT 
+            FORMAT_DATE ('%Y%m', PARSE_DATE('%Y%m%d',date)) as month
+            , SUM (CASE WHEN hits.eCommerceAction.action_type = '6' THEN 1 END) as num_purchase
+      FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*` ,
+            UNNEST (hits) as hits,
+            UNNEST (hits.product) AS product
+      WHERE _table_suffix BETWEEN '0101' AND '0331' 
+            AND product.productRevenue is not NULL
+      GROUP BY month
+      ORDER BY month )
+
+SELECT 
+      *
+      , ROUND (product_addtocart_cte.num_addtocart/product_addtocart_cte.num_product_view *100.00,2) AS add_to_cart_rate
+      , ROUND (purchase_cte.num_purchase/product_addtocart_cte.num_product_view *100.00,2) AS purchase_rate
+FROM product_addtocart_cte 
+JOIN purchase_cte
+USING (month)
+ORDER BY month ;
