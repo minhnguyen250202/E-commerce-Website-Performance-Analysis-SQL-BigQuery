@@ -29,7 +29,9 @@ Tools Used: SQL
 
 **📖 What is this project about? What Business Questions will it solve?** 
 
-This project focuses on analyzing data from an e-commerce website (based on Google Analytics Data), uncovering key performance metrics and user behavior insights. The SQL queries are designed to:
+This project focuses on analyzing data from an e-commerce website (based on Google Analytics Data), uncovering key performance metrics and user behavior insights. 
+
+The SQL queries are designed to:
 
 - **Evaluate the overall performance** of the website (visits, pageviews, transactions).
 
